@@ -1,18 +1,28 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
+import {AppRoutingModule} from './app-routing.module';
+import {AppComponent} from './screen/_root/app.component';
+import {HomePageComponent} from './screen/home-page/home-page.component';
+import {FooterComponent} from './component/footer/footer.component';
+import {NgIconsModule} from "@ng-icons/core";
+import {bootstrapLinkedin} from '@ng-icons/bootstrap-icons'
+import {bootstrapGithub} from '@ng-icons/bootstrap-icons'
+import {bootstrapInstagram} from '@ng-icons/bootstrap-icons'
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HomePageComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgIconsModule.withIcons({bootstrapLinkedin, bootstrapGithub, bootstrapInstagram}),
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}
